@@ -1,0 +1,170 @@
+S<!DOCTYPE html>
+<html>
+<body style="background-image:url('https://img.freepik.com/vector-gratis/ilustracion-cruce-caminos-urbanos-semaforos-paso-peatones_212889-4626.jpg?w=740');background-size:cover;background-repeat:no-repeat;">
+<style>
+  .box{
+    height:300px;
+    width:100px;
+    background-color:black;
+    display:inline-block;
+  }
+  .circle{
+    height:100px;
+    width:100px;
+    border-radius:50px;
+    background-color:grey;
+  }
+  .green{
+    background-color:green;
+  }
+  .yellow{
+    background-color:yellow;
+  }
+  .red{
+    background-color:red;
+  }
+  
+</style>
+<h1>Control de dos semaforos</h1>
+<center><div>
+  <div class="box">
+    <div class="circle" id="luz_rojo1"></div>
+    <div class="circle" id="luz_amarillo1"></div>
+    <div class="circle" id="luz_verde1"></div>
+  </div>
+  <div class="box">
+    <div class="circle" id="luz_rojo2"></div>
+    <div class="circle" id="luz_amarillo2"></div>
+    <div class="circle" id="luz_verde2"></div>
+  </div>
+</div></center>
+<p>
+<div style="display:inline-block">
+  <input name="namekusein" type="radio" id="verde1" onclick="stop_run(1);"><input type="checkbox" id="rojo2" style="display:none"><img src="https://scontent.fmex10-4.fna.fbcdn.net/v/t1.15752-9/286297916_409792161059979_5878775547312227912_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeHVs6V-Oxc1P9bveZlyQfACgqi74oReN0qCqLvihF43SsExbnfWVqOKPypD5R6qnEuU5voAm7345zz45yyhcg59&_nc_ohc=pcgY37_Pq6gAX8Aisum&tn=wIwaBEUQDtKHtzM2&_nc_ht=scontent.fmex10-4.fna&oh=03_AVIuQ9OWKDV0q98YtBUSsfBGdDDsdMUFBQhcDikGQ7QNgQ&oe=62D2807F" heigth=25><img src="https://scontent.fmex10-4.fna.fbcdn.net/v/t1.15752-9/288797335_1166571064076726_7599863769363541207_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeEMBUR8Bwfcasw4O6_piXSeGVTYJhv1_pMZVNgmG_X-kz_ImUKjsoFqlm4pVbtVLj7IYa03mJDUhpyN4Xy_CTSR&_nc_ohc=Vjdq0g5C64EAX-YBHUX&_nc_oc=AQmTHrs686rOpOyU6wdvfLKQI7lF1qMcIN5ZABAsvno4sZddKEdKCb8-lZ2gnSNpwKVHi6nC-cJbCZSzRgeI1fSX&_nc_ht=scontent.fmex10-4.fna&oh=03_AVLj1Oh5QqM-bL1-UlicLVXc1W-vDnuNFiGGcrZb-QQZ3Q&oe=62D277A8" heigth=25><br>
+</div>
+<div style="display:inline-block">
+  <input name="namekusein" type="radio" id="amarillo1" onclick="stop_run(2);"><input type="checkbox" id="rojo22" style="display:none"><img src="https://scontent.fmex10-3.fna.fbcdn.net/v/t1.15752-9/286469093_425026636148520_496405757281210212_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeGP0OJ3QIS-GzquyDRe0mTIudkin2eWPIm52SKfZ5Y8idDCgjuMDNxewH4vpxmCU9evU-ToFz_QNWaUCXd4eIg9&_nc_ohc=OZOFB7K7BIQAX_UWJzi&_nc_ht=scontent.fmex10-3.fna&oh=03_AVIAdQZUkUwCb7Nrb2TqL40wlcSUaaBypFmfoMr9BC-7hQ&oe=62D0BE7B" heigth=25><img src="https://scontent.fmex10-4.fna.fbcdn.net/v/t1.15752-9/288797335_1166571064076726_7599863769363541207_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeEMBUR8Bwfcasw4O6_piXSeGVTYJhv1_pMZVNgmG_X-kz_ImUKjsoFqlm4pVbtVLj7IYa03mJDUhpyN4Xy_CTSR&_nc_ohc=Vjdq0g5C64EAX-YBHUX&_nc_oc=AQmTHrs686rOpOyU6wdvfLKQI7lF1qMcIN5ZABAsvno4sZddKEdKCb8-lZ2gnSNpwKVHi6nC-cJbCZSzRgeI1fSX&_nc_ht=scontent.fmex10-4.fna&oh=03_AVLj1Oh5QqM-bL1-UlicLVXc1W-vDnuNFiGGcrZb-QQZ3Q&oe=62D277A8" heigth=25><br>
+</div>
+<div style="display:inline-block">
+  <input name="namekusein" type="radio" id="rojo1" onclick="stop_run(3);"><input type="checkbox" id="verde2" style="display:none"><img src="https://scontent.fmex10-4.fna.fbcdn.net/v/t1.15752-9/288797335_1166571064076726_7599863769363541207_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeEMBUR8Bwfcasw4O6_piXSeGVTYJhv1_pMZVNgmG_X-kz_ImUKjsoFqlm4pVbtVLj7IYa03mJDUhpyN4Xy_CTSR&_nc_ohc=Vjdq0g5C64EAX-YBHUX&_nc_oc=AQmTHrs686rOpOyU6wdvfLKQI7lF1qMcIN5ZABAsvno4sZddKEdKCb8-lZ2gnSNpwKVHi6nC-cJbCZSzRgeI1fSX&_nc_ht=scontent.fmex10-4.fna&oh=03_AVLj1Oh5QqM-bL1-UlicLVXc1W-vDnuNFiGGcrZb-QQZ3Q&oe=62D277A8" heigth=25><img src="https://scontent.fmex10-4.fna.fbcdn.net/v/t1.15752-9/286297916_409792161059979_5878775547312227912_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeHVs6V-Oxc1P9bveZlyQfACgqi74oReN0qCqLvihF43SsExbnfWVqOKPypD5R6qnEuU5voAm7345zz45yyhcg59&_nc_ohc=pcgY37_Pq6gAX8Aisum&tn=wIwaBEUQDtKHtzM2&_nc_ht=scontent.fmex10-4.fna&oh=03_AVIuQ9OWKDV0q98YtBUSsfBGdDDsdMUFBQhcDikGQ7QNgQ&oe=62D2807F" heigth=25><br>
+</div>
+<div style="display:inline-block">
+  <input name="namekusein" type="radio" id="rojo11" onclick="stop_run(4);"><input type="checkbox" id="amarillo2" style="display:none"><img src="https://scontent.fmex10-4.fna.fbcdn.net/v/t1.15752-9/288797335_1166571064076726_7599863769363541207_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeEMBUR8Bwfcasw4O6_piXSeGVTYJhv1_pMZVNgmG_X-kz_ImUKjsoFqlm4pVbtVLj7IYa03mJDUhpyN4Xy_CTSR&_nc_ohc=Vjdq0g5C64EAX-YBHUX&_nc_oc=AQmTHrs686rOpOyU6wdvfLKQI7lF1qMcIN5ZABAsvno4sZddKEdKCb8-lZ2gnSNpwKVHi6nC-cJbCZSzRgeI1fSX&_nc_ht=scontent.fmex10-4.fna&oh=03_AVLj1Oh5QqM-bL1-UlicLVXc1W-vDnuNFiGGcrZb-QQZ3Q&oe=62D277A8" heigth=25><img src="https://scontent.fmex10-3.fna.fbcdn.net/v/t1.15752-9/286469093_425026636148520_496405757281210212_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeGP0OJ3QIS-GzquyDRe0mTIudkin2eWPIm52SKfZ5Y8idDCgjuMDNxewH4vpxmCU9evU-ToFz_QNWaUCXd4eIg9&_nc_ohc=OZOFB7K7BIQAX_UWJzi&_nc_ht=scontent.fmex10-3.fna&oh=03_AVIAdQZUkUwCb7Nrb2TqL40wlcSUaaBypFmfoMr9BC-7hQ&oe=62D0BE7B" heigth=25><br>
+</div>
+<div style="display:inline-block">
+  <input name="namekusein" type="radio" id="blink1" onclick="blink();"><input type="checkbox" id="blink2" style="display:none"><img src="https://scontent.fmex10-3.fna.fbcdn.net/v/t1.15752-9/286469093_425026636148520_496405757281210212_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeGP0OJ3QIS-GzquyDRe0mTIudkin2eWPIm52SKfZ5Y8idDCgjuMDNxewH4vpxmCU9evU-ToFz_QNWaUCXd4eIg9&_nc_ohc=OZOFB7K7BIQAX_UWJzi&_nc_ht=scontent.fmex10-3.fna&oh=03_AVIAdQZUkUwCb7Nrb2TqL40wlcSUaaBypFmfoMr9BC-7hQ&oe=62D0BE7B" heigth=25><img src="https://scontent.fmex10-3.fna.fbcdn.net/v/t1.15752-9/286469093_425026636148520_496405757281210212_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeGP0OJ3QIS-GzquyDRe0mTIudkin2eWPIm52SKfZ5Y8idDCgjuMDNxewH4vpxmCU9evU-ToFz_QNWaUCXd4eIg9&_nc_ohc=OZOFB7K7BIQAX_UWJzi&_nc_ht=scontent.fmex10-3.fna&oh=03_AVIAdQZUkUwCb7Nrb2TqL40wlcSUaaBypFmfoMr9BC-7hQ&oe=62D0BE7B" heigth=25><br>
+</div>
+<button style="display:inline-block" onclick="continue_run();">Continuar</button>
+</p>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script> <!-- include socket.io client side script -->
+<script>
+var socket = io(); //load socket.io-client and connect to the host that serves the page
+var numero_paso = 1;
+var is_running = true;
+
+function just_run(){
+  if(is_running){
+    clear();
+    if(numero_paso == 1){
+      document.getElementById("luz_verde1").classList.add('green');
+      socket.emit("verde1", 1);                      //send push button status to back to server
+      document.getElementById("luz_rojo2").classList.add('red');
+      socket.emit("rojo2", 1); 
+    }
+    if(numero_paso == 2){
+      document.getElementById("luz_amarillo1").classList.add('yellow');
+      socket.emit("amarillo1", 1);                      //send push button status to back to server
+      document.getElementById("luz_rojo2").classList.add('red');
+      socket.emit("rojo22", 1);  
+    }
+    if(numero_paso == 3){
+      document.getElementById("luz_rojo1").classList.add('red');
+      socket.emit("rojo1", 1);                      //send push button status to back to server
+      document.getElementById("luz_verde2").classList.add('green');
+      socket.emit("verde2", 1); 
+    }
+    if(numero_paso==4){
+      document.getElementById("luz_rojo1").classList.add('red');
+      socket.emit("rojo11", 1);                      //send push button status to back to server
+      document.getElementById("luz_amarillo2").classList.add('yellow');
+      socket.emit("amarillo2", 1); 
+      numero_paso=0;
+    }
+    numero_paso++;
+    if(numero_paso == 2){
+      setTimeout(just_run,5000);
+    }
+    if(numero_paso == 3){
+      setTimeout(just_run,2000);
+    }
+    if(numero_paso == 4){
+      setTimeout(just_run,5000);
+    }
+    if(numero_paso == 1){
+      setTimeout(just_run,2000);
+    }
+  }
+}
+
+function clear(){
+  socket.emit("verde1", 0);
+  socket.emit("amarillo1", 0);
+  socket.emit("rojo1", 0);
+  socket.emit("rojo11", 0);
+  document.getElementById("luz_verde1").classList.remove('green');
+  document.getElementById("luz_amarillo1").classList.remove('yellow');
+  document.getElementById("luz_rojo1").classList.remove('red');
+  
+  socket.emit("verde2", 0);
+  socket.emit("amarillo2", 0);
+  socket.emit("rojo2", 0);
+  socket.emit("rojo22", 0);
+  document.getElementById("luz_verde2").classList.remove('green');
+  document.getElementById("luz_amarillo2").classList.remove('yellow');
+  document.getElementById("luz_rojo2").classList.remove('red');
+}
+
+setTimeout(just_run,0);
+
+function stop_run(paso){
+  is_running = true;
+  numero_paso = paso;
+  just_run();
+  is_running = false;
+}
+
+function continue_run(){
+  is_running = true;
+  just_run();
+}
+
+function blink(){
+  is_running = false;
+  clear();
+  setTimeout(yellowOn,0);
+}
+
+function yellowOn(){
+  if(is_running==false){
+    socket.emit("amarillo1", 1); 
+    socket.emit("amarillo2", 1); 
+    document.getElementById("luz_amarillo1").classList.add('yellow');
+    document.getElementById("luz_amarillo2").classList.add('yellow');
+    setTimeout(yellowOff,250);
+  }
+}
+
+function yellowOff(){
+  socket.emit("amarillo1", 0); 
+  socket.emit("amarillo2", 0);
+  document.getElementById("luz_amarillo1").classList.remove('yellow');
+  document.getElementById("luz_amarillo2").classList.remove('yellow');
+  setTimeout(yellowOn,250); 
+}
+
+</script>
+
+</body>
+</html>
